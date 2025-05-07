@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTeen | Deteksi Dini Narkoba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Safe<span>Teen</span></a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#features" class="nav-link">Fitur</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#" class="btn-login">Masuk</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Deteksi Dini Penggunaan <span>Narkoba</span> pada Remaja</h1>
+                <p class="fade-in delay-1">Platform berbasis AI untuk membantu orang tua dan sekolah dalam mendeteksi risiko penggunaan narkoba pada remaja.</p>
+                <div class="hero-buttons fade-in delay-2">
+                    <a href="#" class="btn-primary">Mulai Sekarang</a>
+                    <a href="#" class="btn-secondary">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+            <div class="hero-image slide-in-right">
+                <img src="assets/hero-image.svg" alt="Teenager health illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Fitur Unggulan Kami</h2>
+            <p class="section-subtitle">Teknologi canggih untuk deteksi dini dan pencegahan</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Kuesioner Psikologis</h3>
+                    <p>Pertanyaan terstruktur yang dirancang oleh ahli untuk mengidentifikasi perubahan perilaku.</p>
+                    <a href="#" class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Analisis Ekspresi Wajah</h3>
+                    <p>Deteksi emosi melalui teknologi AI untuk mengidentifikasi tanda-tanda penyalahgunaan.</p>
+                    <a href="#" class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Konseling Virtual</h3>
+                    <p>Chatbot cerdas yang memberikan saran awal dan rekomendasi tindakan.</p>
+                    <a href="#" class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-image slide-in-left">
+                <img src="assets/about-image.svg" alt="About SafeTeen">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">Mengapa SafeTeen Dibutuhkan?</h2>
+                <p>Menurut data BNN, penyalahgunaan narkoba di kalangan pelajar meningkat 30% dalam 3 tahun terakhir. Deteksi dini dapat mencegah kecanduan dan kerusakan permanen.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>92%</h3>
+                        <p>Akurasi deteksi</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Konseling tersedia</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>Sekolah bermitra</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn-primary">Bergabung Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Masuk ke Akun Anda</h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Kata Sandi</label>
+                    <input type="password" id="password" placeholder="Masukkan kata sandi" required>
+                </div>
+                
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> Ingat saya
+                    </label>
+                    <a href="#">Lupa kata sandi?</a>
+                </div>
+                
+                <button type="submit" class="btn-primary">Masuk</button>
+                
+                <div class="form-footer">
+                    <p>Belum punya akun? <a href="#" id="showRegister">Daftar sekarang</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Buat Akun Baru</h2>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" id="fullname" placeholder="Masukkan nama lengkap" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" placeholder="Masukkan email Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-password">Kata Sandi</label>
+                    <input type="password" id="reg-password" placeholder="Buat kata sandi" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Konfirmasi Kata Sandi</label>
+                    <input type="password" id="confirm-password" placeholder="Ulangi kata sandi" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-type">Saya adalah</label>
+                    <select id="user-type" required>
+                        <option value="">Pilih peran Anda</option>
+                        <option value="student">Pelajar</option>
+                        <option value="parent">Orang Tua</option>
+                        <option value="school">Perwakilan Sekolah</option>
+                    </select>
+                </div>
+                
+                <div id="school-info" class="hidden">
+                    <div class="form-group">
+                        <label for="school-name">Nama Sekolah</label>
+                        <input type="text" id="school-name" placeholder="Masukkan nama sekolah">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="school-id">ID Sekolah (jika ada)</label>
+                        <input type="text" id="school-id" placeholder="Masukkan ID sekolah">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary">Daftar</button>
+                
+                <div class="form-footer">
+                    <p>Sudah punya akun? <a href="#" id="showLogin">Masuk sekarang</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="logo">Safe<span>Teen</span></a>
+                    <p>Platform deteksi dini penyalahgunaan narkoba berbasis AI untuk melindungi generasi muda Indonesia.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Fitur</a></li>
+                        <li><a href="#">Tentang</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Hubungi Kami</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@safeteen.id</li>
+                        <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SafeTeen. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
