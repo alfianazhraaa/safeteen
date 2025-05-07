@@ -34,12 +34,12 @@
                 <h1 class="fade-in">Deteksi Dini Penggunaan <span>Narkoba</span> pada Remaja</h1>
                 <p class="fade-in delay-1">Platform berbasis AI untuk membantu orang tua dan sekolah dalam mendeteksi risiko penggunaan narkoba pada remaja.</p>
                 <div class="hero-buttons fade-in delay-2">
-                    <a href="#" class="btn-primary">Mulai Sekarang</a>
-                    <a href="#" class="btn-secondary">Pelajari Lebih Lanjut</a>
+                    <a href="#questionnaire" class="btn-primary">Mulai Sekarang</a>
+                    <a href="#about" class="btn-secondary">Pelajari Lebih Lanjut</a>
                 </div>
             </div>
             <div class="hero-image slide-in-right">
-                <img src="assets/hero-image.svg" alt="Teenager health illustration">
+                <img src="https://img.freepik.com/free-vector/teenager-concept-illustration_114360-10079.jpg" alt="Teenager health illustration">
             </div>
         </div>
     </section>
@@ -51,31 +51,31 @@
             <p class="section-subtitle">Teknologi canggih untuk deteksi dini dan pencegahan</p>
             
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" onclick="openQuestionnaire()">
                     <div class="feature-icon">
                         <i class="fas fa-question-circle"></i>
                     </div>
                     <h3>Kuesioner Psikologis</h3>
                     <p>Pertanyaan terstruktur yang dirancang oleh ahli untuk mengidentifikasi perubahan perilaku.</p>
-                    <a href="#" class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    <div class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></div>
                 </div>
                 
-                <div class="feature-card">
+                <div class="feature-card" onclick="openFaceScanner()">
                     <div class="feature-icon">
                         <i class="fas fa-camera"></i>
                     </div>
                     <h3>Analisis Ekspresi Wajah</h3>
                     <p>Deteksi emosi melalui teknologi AI untuk mengidentifikasi tanda-tanda penyalahgunaan.</p>
-                    <a href="#" class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    <div class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></div>
                 </div>
                 
-                <div class="feature-card">
+                <div class="feature-card" onclick="openChatbot()">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>Konseling Virtual</h3>
                     <p>Chatbot cerdas yang memberikan saran awal dan rekomendasi tindakan.</p>
-                    <a href="#" class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    <div class="feature-link">Selengkapnya <i class="fas fa-arrow-right"></i></div>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-image slide-in-left">
-                <img src="assets/about-image.svg" alt="About SafeTeen">
+                <img src="https://img.freepik.com/free-vector/drug-abuse-concept-illustration_114360-7451.jpg" alt="About SafeTeen">
             </div>
             <div class="about-content">
                 <h2 class="section-title">Mengapa SafeTeen Dibutuhkan?</h2>
@@ -106,7 +106,174 @@
                     </div>
                 </div>
                 
-                <a href="#" class="btn-primary">Bergabung Sekarang</a>
+                <button onclick="showRegisterModal()" class="btn-primary">Bergabung Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questionnaire Section -->
+    <section id="questionnaire" class="questionnaire hidden">
+        <div class="container">
+            <div class="questionnaire-header">
+                <h2 class="section-title">Kuesioner Deteksi Dini</h2>
+                <p class="section-subtitle">Jawablah pertanyaan berikut dengan jujur untuk membantu kami menilai risiko</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+            
+            <form id="questionnaireForm">
+                <div class="question active" id="q1">
+                    <h3>1. Apakah Anda mengalami perubahan pola tidur yang signifikan akhir-akhir ini?</h3>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q1" value="3" required> Ya, saya sulit tidur atau tidur terlalu lama
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="2"> Kadang-kadang
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="1"> Tidak, pola tidur saya normal
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q2">
+                    <h3>2. Apakah nafsu makan Anda berubah secara drastis?</h3>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q2" value="3" required> Ya, saya sering tidak nafsu makan atau makan berlebihan
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="2"> Terkadang
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="1"> Tidak, nafsu makan saya normal
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q3">
+                    <h3>3. Apakah Anda pernah menggunakan zat tertentu untuk mengatasi masalah atau merasa lebih baik?</h3>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q3" value="5" required> Ya, beberapa kali
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="3"> Pernah mencoba sekali
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="1"> Tidak pernah
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q4">
+                    <h3>4. Apakah prestasi akademik Anda menurun akhir-akhir ini?</h3>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q4" value="3" required> Ya, sangat signifikan
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="2"> Sedikit menurun
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="1"> Tidak, tetap stabil
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q5">
+                    <h3>5. Apakah Anda sering menghindari kontak dengan keluarga atau teman-teman?</h3>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q5" value="3" required> Ya, saya lebih suka menyendiri
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="2"> Kadang-kadang
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="1"> Tidak, saya tetap aktif bersosialisasi
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="questionnaire-nav">
+                    <button type="button" class="btn-secondary" id="prevBtn" disabled>Sebelumnya</button>
+                    <button type="button" class="btn-primary" id="nextBtn">Selanjutnya</button>
+                    <button type="submit" class="btn-primary hidden" id="submitBtn">Kirim Jawaban</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Face Scanner Section -->
+    <section id="faceScanner" class="face-scanner hidden">
+        <div class="container">
+            <h2 class="section-title">Pemindai Ekspresi Wajah</h2>
+            <p class="section-subtitle">Izinkan akses kamera untuk analisis ekspresi wajah Anda</p>
+            
+            <div class="scanner-container">
+                <div class="video-container">
+                    <video id="video" width="640" height="480" autoplay></video>
+                    <canvas id="canvas" width="640" height="480"></canvas>
+                </div>
+                
+                <div class="scanner-controls">
+                    <button id="startScanner" class="btn-primary">
+                        <i class="fas fa-camera"></i> Mulai Pemindaian
+                    </button>
+                    <button id="captureBtn" class="btn-secondary hidden">
+                        <i class="fas fa-camera-retro"></i> Ambil Gambar
+                    </button>
+                    <button id="retryBtn" class="btn-secondary hidden">
+                        <i class="fas fa-redo"></i> Ulangi
+                    </button>
+                </div>
+                
+                <div id="resultContainer" class="hidden">
+                    <h3>Hasil Analisis:</h3>
+                    <div id="emotionResults"></div>
+                    <button id="saveResult" class="btn-primary">
+                        <i class="fas fa-save"></i> Simpan Hasil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot" class="chatbot hidden">
+        <div class="container">
+            <h2 class="section-title">Konseling Virtual</h2>
+            <p class="section-subtitle">Chatbot kami siap membantu menjawab pertanyaan Anda</p>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chatbot-info">
+                        <h3>SafeTeen Bot</h3>
+                        <p>Online</p>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            Halo! Saya SafeTeen Bot. Saya di sini untuk membantu Anda dengan pertanyaan tentang pencegahan narkoba. Ada yang bisa saya bantu?
+                        </div>
+                        <div class="message-time">10:00</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Ketik pesan Anda...">
+                    <button id="sendMessage" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -202,6 +369,24 @@
         </div>
     </div>
 
+    <!-- Result Modal -->
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="result-content" id="resultContent">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+            <div class="result-actions">
+                <button id="consultBtn" class="btn-primary">
+                    <i class="fas fa-comments"></i> Konseling Online
+                </button>
+                <button id="reportBtn" class="btn-secondary">
+                    <i class="fas fa-flag"></i> Laporkan Kasus
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -214,10 +399,10 @@
                 <div class="footer-links">
                     <h3>Tautan Cepat</h3>
                     <ul>
-                        <li><a href="#">Beranda</a></li>
-                        <li><a href="#">Fitur</a></li>
-                        <li><a href="#">Tentang</a></li>
-                        <li><a href="#">Kontak</a></li>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#features">Fitur</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#questionnaire">Kuesioner</a></li>
                     </ul>
                 </div>
                 
@@ -245,4 +430,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+            </html>
